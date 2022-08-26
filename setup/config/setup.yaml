@@ -1,16 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sealed-secrets
+  name: argocd-setup
   namespace: argocd
 spec:
   project: default
   source:
-    chart: config
-    repoURL: https://bitnami-labs.github.io/sealed-secrets
-    targetRevision: 1.16.1
-    helm:
-      releaseName: sealed-secrets
+    repoURL: https://github.com/scabarrus/argocd
+    path: setup/config
+    targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: kubeseal
+    namespace: argocd
