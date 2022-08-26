@@ -6,10 +6,9 @@ metadata:
 spec:
   project: keycloak
   source:
-    chart: keycloak
-    repoURL: https://github.com/scabarrus/argocd
-    path: apps
-    targetRevision: master
+    repoURL: https://github.com/scabarrus/argocd.git
+    path: apps/helm/keycloak
+    targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
     namespace: keycloak
