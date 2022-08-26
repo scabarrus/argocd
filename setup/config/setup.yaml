@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/scabarrus/argocd
-    path: setup/config
+    path: setup/config/project
     targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
