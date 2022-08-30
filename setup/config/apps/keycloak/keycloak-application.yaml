@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/scabarrus/argocd.git
     path: apps/helm/keycloak
     targetRevision: main
+    helm:
+      fileParameters:
+      - path: ../../config/keycloak/values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: keycloak
