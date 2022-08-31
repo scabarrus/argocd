@@ -7,7 +7,7 @@ spec:
   project: keycloak
   source:
     repoURL: https://github.com/scabarrus/argocd.git
-    path: apps/helm/keycloak
+    path: apps/helm/keycloak-removed
     targetRevision: main
     helm:
       fileParameters:
